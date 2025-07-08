@@ -1,0 +1,152 @@
+@media (max-width: 900px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
+  html,
+  body {
+    overflow-y: scroll;
+  }
+
+  .header-navigation {
+    display: none !important;
+  }
+
+  .header-navigation-mobile {
+    display: inline-block !important;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+  }
+
+  .menu-icon {
+    display: inline-block;
+    width: 40px;
+    height: 40 px;
+    cursor: pointer;
+    margin: 10%;
+    fill: #d01c1f;;
+  }
+
+  .menu-icon:hover {
+    transform: scale(1.1);
+    transition: transform 300ms ease-in-out;
+  }
+
+  input:checked ~ .nav-mobile {
+    width: 15vw;
+  }
+
+  .nav-mobile {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 0;
+    transition: width 600ms ease;
+    position: relative;
+    overflow: hidden;
+    background-color: rgba(247, 244, 233, 0.6);  }
+
+}
+
+@media screen and (max-width: 900px) and (orientation:landscape) {
+  
+  .header-navigation-mobile {
+    display: flex !important;
+  }
+
+  .nav-mobile {
+    display: flex !important;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 0;
+    transition: width 600ms ease;
+  }
+
+  input:checked ~ .nav-mobile {
+    width: 60vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo {
+    width: 50px;
+  }
+
+  .btn-container {
+    padding-bottom: 30%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .btn-container > a:nth-child(2) {
+    margin-left: 0;
+    margin-top: 5%;
+  }
+  
+  .project-title {
+    font-size: 2em;
+  }
+
+  .mockup-pics,
+  .gif-container  {
+    margin-top: 15%;
+  }
+
+  .conference-container,
+  .tweetbot-container,
+  .newsweek-container {
+    margin-top: -12%;
+  }
+
+  .twitter-gif {
+    margin-top: 0;
+  }
+
+}
+
+@media (max-width: 700px) {
+  .my-name-title {
+    font-size: 4em;
+  }
+}
+
+
+@media (max-width: 600px) {
+
+  .my-name-title {
+    font-size: 3.5em;
+  }
+
+  .about-container-stack {
+    font-size: 1.3em;
+  }
+
+  .recent-work-desc h2 {
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 440px) {
+
+  .my-name-title {
+    font-size: 3em;
+  }
+
+  .about-container-stack {
+    padding: 0 5%;
+    font-size: 1.1em;
+  }
+
+  .recent-work-desc h2 {
+    font-size: 1.8em;
+  }
+
+  .twitter-gif {
+    min-width: 0;
+  }
+
+}

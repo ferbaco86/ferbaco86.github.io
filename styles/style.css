@@ -1,0 +1,504 @@
+/* CSS RESET */
+
+/* Box sizing rules */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+  list-style: none;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: 'B612', sans-serif;
+  color: var(--text-color);
+  background-color: var(--bg-color-dark);
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+html { 
+  overflow-x: hidden;
+}
+
+html,
+body {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* colors */
+
+:root {
+  --text-color: #f0ebeb;
+  --text-color-dark: #1d1d2c;
+  --highlight-projects-blue: #248d92;
+  --highlight-projects-red: #e40c2b;
+  --highlight-projects-yellow: #eba63f;
+  --highlight-projects-alt: #438945;
+  --border-nav: #d01c1f;
+  --bg-color-dark: #0d0c1d;
+  --bg-color-med-dark: #161b33;
+  --bg-color-light-dark: #474973;
+  --bg-color-light:#6f557e;
+  --bg-color-lighter: #fff;
+}
+
+/* display */
+
+.pos-rel {
+  position: relative;
+}
+
+.pos-abs {
+  position: absolute;
+}
+
+.d-flex {
+  display: flex !important;
+}
+
+.row-reverse {
+  flex-direction: row-reverse;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.j-content-center {
+  justify-content: center;
+}
+
+.a-items-center {
+  align-items: center;
+}
+
+.j-content-between {
+  justify-content: space-between;
+}
+
+.j-content-evenly {
+  justify-content: space-evenly;
+}
+
+.j-content-around {
+  justify-content: space-around;
+}
+
+.j-content-end {
+  justify-content: flex-end;
+}
+
+.f-grow-1 {
+  flex-grow: 1;
+}
+
+.pt-5 {
+  padding-top: 5% !important;
+}
+
+.pb-5 {
+  padding-bottom: 5% !important;
+}
+
+.pad-X-15 {
+  padding: 0 15%;
+}
+
+.pad-X-20 {
+  padding: 0 20%;
+}
+
+.pad-Y-2 {
+  padding: 2% 0;
+}
+
+.pad-Y-5 {
+  padding: 5% 0;
+}
+
+.pad-Y-10 {
+  padding: 10% 0;
+}
+
+.mar-X-20 {
+  margin: 0 20%
+}
+
+.mar-center {
+  margin: 0 auto;
+}
+
+.ml-5 {
+  margin-left: 5%;
+}
+
+.ml-10 {
+  margin-left: 10%;
+}
+
+.ml-15 {
+  margin-left: 15%;
+}
+
+.ml-20 {
+  margin-left: 20%;
+}
+
+.ml-25 {
+  margin-left: 25%;
+}
+
+.ml-30 {
+  margin-left: 30%;
+}
+
+.ml-40 {
+  margin-left: 40%;
+}
+
+.mt-2 {
+  margin-top: 2%;
+}
+
+.mt-5 {
+  margin-top: 5%;
+}
+
+.mt-10 {
+  margin-top: 10%;
+}
+
+.mt-15 {
+  margin-top: 15%;
+}
+
+.mt-20 {
+  margin-top: 20%;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.full-height {
+  height: 100%;
+}
+
+.nav-right-mobile {
+  display: none;
+}
+
+.navbar {
+  padding: 1% 15%;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.stack {
+  
+  color: var(--highlight-projects-yellow);
+}
+
+.slideUp {
+  -webkit-transform: translateY(-100px);
+  transform: translateY(-100px);
+  transition: transform .5s ease-out;
+}
+
+.slideDown {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  transition: transform .5s ease-out;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.header-navigation {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+  border-top: 5px solid var(--border-nav);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+nav {
+  background-color: var(--bg-color-lighter);
+  color: var(--text-color);
+}
+
+.nav-center {
+  flex-grow: 2;
+}
+
+.nav-links {
+  color: var(--text-color-dark);
+  text-decoration: none;
+}
+
+.nav-links:hover {
+  color: var(--border-nav);
+  text-decoration: underline;
+  text-decoration-color: var(--highlight-projects-alt);
+}
+
+.recent-work-desc .projects-links {
+  color: var(--highlight-projects-blue);
+  display: contents;
+}
+
+.geeksden-container .projects-links {
+  color:#F7DDBB;
+}
+
+.projects-links {
+  color: var(--highlight-projects-yellow);
+  text-decoration: none;
+}
+
+.projects-links:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--highlight-projects-red);
+}
+
+h2 {
+  font-size: 2.5em;
+}
+
+.btn-projects {
+  box-shadow: 0 3px 0 0 #cf9235, 0 4px 4px -1px rgba(0, 0, 0, 0.6), 0 4px 6px 1px rgba(0, 0, 0, 0.3), 0 1px 2px 1px transparent inset, 0 18px 32px -2px rgba(255, 255, 255, 0.1) inset;
+  background-color: var(--highlight-projects-yellow);
+  color: #E6EAEF;
+}
+
+.btn-projects:hover {
+  box-shadow: 0 3px 0 0 #cf9235, 0 6px 4px -1px rgba(0, 0, 0, 0.3), 0 4px 16px rgba(0, 0, 0, 0.5), 0 1px 2px 1px transparent inset, 0 18px 32px -2px rgba(255, 255, 255, 0.14) inset;
+}
+
+.btn-projects:active {
+  box-shadow: 0 0px 0 0 #5e3e10, 0 3px 0 0 transparent, 0 4px 16px transparent, 0 1px 2px 1px rgba(0, 0, 0, 0.5) inset, 0 -18px 32px -2px rgba(255, 255, 255, 0.1) inset;
+  transition: 0s;
+  color: #ac7626;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.btn:active {
+  transform: translateY(3px);
+}
+
+.btn {
+  padding: 1em 1.8em;
+  text-decoration: none;
+  color: var(--text-color-dark);
+  font-weight: normal;
+  display: inline-block;
+  border-width: 0;
+  border-style: solid;
+  cursor: pointer;
+  user-select: none;
+  vertical-align: bottom;
+  transition: box-shadow 0.2s, transform 0.2s, color 0.2s;
+}
+
+button, a {
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.logo {
+  width: 100px;
+}
+
+.logo-social {
+  width: 40px;
+}
+
+.logo-social-link {
+  width: 30px;
+}
+
+.logo-social-footer {
+  width: 30px;
+  fill: var(--bg-color-lighter);
+}
+
+footer {
+  background-color: var(--bg-color-dark);
+}
+
+.logo-social-link:hover,
+.logo-social:hover,
+.logo:hover,
+.logo-social-footer:hover {
+  transform: translateY(-3px);
+  transition: transform 200ms ease-out, fill 200ms ease ;
+  fill: var(--border-nav);
+}
+
+.nav-right {
+  width: max-content;
+}
+
+.my-name-title {
+  font-size: 5em;
+}
+
+.section-about {
+  min-height: 350px;
+  min-width: 600px;
+  overflow-x: hidden;
+  padding-bottom: 30%;
+}
+
+.about-container-stack {
+  font-size: 1.3em;
+  align-self: center;
+}
+
+.recent-work-desc {
+  color: var(--text-color-dark);
+  background-color: var(--bg-color-lighter);
+  border-bottom: 5px solid var(--bg-color-light-dark);
+  text-align: center;
+  padding: 5% 15%;
+  margin-top: -28%;
+  z-index: 1;
+  width: 80%;
+}
+
+.recent-work-desc,
+.contact {
+  border-bottom: 5px solid var(--bg-color-light-dark);
+  border-radius: 15px;
+}
+
+.gif-container {
+  background-image: url(../images/chrome-frame.png);
+  background-size: cover;
+  margin-top: 5%;
+  min-width: 300px;
+  max-width: 83%;
+}
+
+.twitter-gif {
+  width: 97%;
+  margin-left: 1.5%;
+}
+
+.conference-container {
+  background-color: var(--bg-color-med-dark);
+}
+
+.geeksden-container {
+  background-color: var(--bg-color-light);
+}
+
+.conference-container,
+.tweetbot-container,
+.newsweek-container {
+  margin-top: -5%;
+}
+
+.geeksden-container,
+.conference-container {
+  -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 5%); 
+  clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 5%);
+}
+  
+
+.tweetbot-container,
+.newsweek-container {
+  -webkit-clip-path: polygon(100% 5%, 100% 100%, 0 100%, 0 0);
+  clip-path: polygon(100% 5%, 100% 100%, 0 100%, 0 0);
+}
+
+.mockup-pics {
+  min-width: 300px;
+  padding-top: 5%;
+}
+
+.newsweek-container {
+  background-color: var(--bg-color-light-dark);
+}
+
+.tweetbot-container {
+  background-color: var(--bg-color-dark);
+}
+
+.project-title {
+  font-size: 2.5em;
+}
+
+.contact {
+  background-color: var(--bg-color-lighter);
+  color: var(--text-color-dark);
+  margin-top: -5%;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.25),
+              0 2px 2px rgba(0,0,0,0.2),
+              0 4px 4px rgba(0,0,0,0.15),
+              0 8px 8px rgba(0,0,0,0.1),
+              0 16px 16px rgba(0,0,0,0.05);
+  z-index: 1;
+  width: 80%;
+}
+
+.hide-text {
+  display: none !important;
+}
